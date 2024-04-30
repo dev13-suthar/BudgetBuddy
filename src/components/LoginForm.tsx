@@ -21,7 +21,7 @@ const LoginForm = () => {
        headers:{
         "Content-Type":"application/json",
        },
-       body:JSON.stringify(values)
+       body:JSON.stringify({email:values.email,password:values.password})
       });
       await res.json();
       if(!res.ok){
